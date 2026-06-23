@@ -1,0 +1,27 @@
+parameters:
+	phpVersion: 80500
+
+	paths:
+		- app
+
+	excludePaths:
+		analyseAndScan:
+			- tests/*
+		analyse:
+			- stubs
+
+	scanFiles:
+		- stubs/ModelHelper.php
+
+	# Level 9 is the highest level
+	level: 6
+
+	ignoreErrors:
+		#- '#no value type specified in iterable type array#'
+
+	reportUnmatchedIgnoredErrors: false
+
+	parallel:
+		jobSize: 20
+		maximumNumberOfProcesses: 6
+		minimumNumberOfJobsPerProcess: 2
