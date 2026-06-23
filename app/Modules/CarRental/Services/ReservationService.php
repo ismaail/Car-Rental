@@ -21,6 +21,8 @@ class ReservationService
 
     /**
      * @param array<string, mixed> $data
+     *
+     * @deprecated
      */
     public function create(array $data): Reservation
     {

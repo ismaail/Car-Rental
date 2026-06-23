@@ -13,6 +13,9 @@ use App\Modules\CarRental\Models\Vehicle;
 use Carbon\CarbonInterface;
 use Illuminate\Validation\ValidationException;
 
+/**
+ * @deprecated
+ */
 class AvailabilityService
 {
     public function ensureVehicleIsAvailable(
