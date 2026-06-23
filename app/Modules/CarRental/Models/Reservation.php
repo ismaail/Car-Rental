@@ -9,6 +9,7 @@ use App\Modules\CarRental\Enums\ReservationStatus;
 use Carbon\CarbonInterface;
 use Database\Factories\Modules\CarRental\Models\ReservationFactory;
 use Illuminate\Database\Eloquent\Attributes\Scope;
+use Illuminate\Database\Eloquent\Attributes\UseFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -17,6 +18,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * @mixin IdeHelperReservation
  */
+#[UseFactory(ReservationFactory::class)]
 class Reservation extends Model
 {
     /** @use HasFactory<ReservationFactory> */
@@ -41,11 +43,6 @@ class Reservation extends Model
         'cancelled_at',
         'created_by',
     ];
-
-    protected static function newFactory(): ReservationFactory
-    {
-        return ReservationFactory::new();
-    }
 
     /**
      * @return array<string, string>

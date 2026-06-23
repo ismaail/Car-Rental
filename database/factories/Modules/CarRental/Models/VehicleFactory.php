@@ -42,4 +42,11 @@ class VehicleFactory extends Factory
             'notes' => fake()->sentence(),
         ];
     }
+
+    public function available(): Factory
+    {
+        return $this->state(fn (array $attributes) => [
+            'status' => VehicleStatus::Available,
+        ]);
+    }
 }
