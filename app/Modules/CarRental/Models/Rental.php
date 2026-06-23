@@ -12,6 +12,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
+/**
+ * @mixin IdeHelperRental
+ */
 class Rental extends Model
 {
     /** @use HasFactory<RentalFactory> */

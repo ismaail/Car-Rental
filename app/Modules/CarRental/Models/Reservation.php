@@ -12,6 +12,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * @mixin IdeHelperReservation
+ */
 class Reservation extends Model
 {
     /** @use HasFactory<ReservationFactory> */

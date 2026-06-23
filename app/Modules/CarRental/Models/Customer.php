@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
+/**
+ * @mixin IdeHelperCustomer
+ */
 class Customer extends Model
 {
     /** @use HasFactory<CustomerFactory> */
