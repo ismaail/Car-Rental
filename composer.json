@@ -13,7 +13,8 @@
         "laravel/framework": "^13.0",
         "laravel/tinker": "^3.0",
         "lorisleiva/laravel-actions": "^2.10",
-        "mpdf/mpdf": "*"
+        "mpdf/mpdf": "*",
+        "sentry/sentry-laravel": "^4.26"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.7",
