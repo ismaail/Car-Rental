@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\CarRental\Http\Requests;
 
+use App\Modules\Vehicles\Rules\Available;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ReservationRequest extends FormRequest
@@ -19,7 +20,7 @@ class ReservationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'vehicle_id' => ['required', 'exists:vehicles,id'],
+            'vehicle_id' => ['required', 'exists:vehicles,id', new Available()],
             'customer_id' => ['required', 'exists:customers,id'],
             'pickup_at' => ['required', 'date', 'after_or_equal:now'],
             'return_at' => ['required', 'date', 'after:pickup_at'],
