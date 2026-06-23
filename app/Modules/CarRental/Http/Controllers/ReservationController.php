@@ -11,6 +11,8 @@ use App\Modules\CarRental\Models\Reservation;
 use App\Modules\CarRental\Models\Vehicle;
 use App\Modules\CarRental\Services\RentalService;
 use App\Modules\CarRental\Services\ReservationService;
+use App\Modules\Reservations\Action\CreateReservationAction;
+use App\Modules\Reservations\DataObjects\ReservationData;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 
@@ -41,7 +43,9 @@ class ReservationController extends Controller
 
     public function store(ReservationRequest $request): RedirectResponse
     {
-        $reservation = $this->reservationService->create($request->validated());
+        $reservation = CreateReservationAction::run(
+            ReservationData::fromRequest($request),
+        );
 
         return redirect()->route('car-rental.reservations.show', $reservation)
             ->with('status', 'Reservation created successfully.')
