@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Models\Cars\Brand;
 use App\Models\Cars\Modele;
 use Illuminate\Database\Migrations\Migration;

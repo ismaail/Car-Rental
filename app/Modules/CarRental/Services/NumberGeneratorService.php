@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Services;
 
 use App\Modules\CarRental\Models\Rental;
@@ -9,11 +11,12 @@ class NumberGeneratorService
 {
     public function nextReservationNumber(): string
     {
-        $prefix = 'RES-'.now()->format('Ymd');
+        $prefix = 'RES-' . now()->format('Ymd');
         $lastNumber = Reservation::query()
-            ->where('reservation_number', 'like', $prefix.'-%')
+            ->where('reservation_number', 'like', $prefix . '-%')
             ->latest('id')
-            ->value('reservation_number');
+            ->value('reservation_number')
+        ;
 
         $sequence = $this->extractSequence($lastNumber) + 1;
 
@@ -22,11 +25,12 @@ class NumberGeneratorService
 
     public function nextRentalNumber(): string
     {
-        $prefix = 'RNT-'.now()->format('Ymd');
+        $prefix = 'RNT-' . now()->format('Ymd');
         $lastNumber = Rental::query()
-            ->where('rental_number', 'like', $prefix.'-%')
+            ->where('rental_number', 'like', $prefix . '-%')
             ->latest('id')
-            ->value('rental_number');
+            ->value('rental_number')
+        ;
 
         $sequence = $this->extractSequence($lastNumber) + 1;
 
@@ -35,10 +39,10 @@ class NumberGeneratorService
 
     private function extractSequence(?string $number): int
     {
-        if ($number === null) {
+        if (null === $number) {
             return 0;
         }
 
-        return (int) str($number)->afterLast('-')->value();
+        return (int)str($number)->afterLast('-')->value();
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Actions;
 
 use App\Modules\CarRental\Enums\DepositStatus;
@@ -18,7 +20,8 @@ class ProcessReturnAction
             $rental->loadMissing(['vehicle', 'inspections', 'deposit']);
 
             $hasReturnInspection = $rental->inspections
-                ->contains(fn ($inspection) => $inspection->type === InspectionType::Return);
+                ->contains(fn ($inspection) => InspectionType::Return === $inspection->type)
+            ;
 
             if (! $hasReturnInspection) {
                 throw ValidationException::withMessages([

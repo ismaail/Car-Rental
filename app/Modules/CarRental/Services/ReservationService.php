@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Services;
 
 use App\Modules\CarRental\Actions\ConfirmReservationAction;
@@ -18,7 +20,7 @@ class ReservationService
     ) {}
 
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function create(array $data): Reservation
     {
@@ -39,7 +41,7 @@ class ReservationService
     }
 
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function update(Reservation $reservation, array $data): Reservation
     {

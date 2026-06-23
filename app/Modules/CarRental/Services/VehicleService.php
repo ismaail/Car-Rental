@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Services;
 
 use App\Modules\CarRental\Models\Vehicle;
@@ -10,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 class VehicleService
 {
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function create(array $data): Vehicle
     {
@@ -24,7 +26,7 @@ class VehicleService
     }
 
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function update(Vehicle $vehicle, array $data): Vehicle
     {
@@ -37,18 +39,18 @@ class VehicleService
     }
 
     /**
-     * @param  array<int, UploadedFile>  $images
+     * @param array<int, UploadedFile> $images
      */
     private function syncImages(Vehicle $vehicle, array $images): void
     {
-        if ($images === []) {
+        if ([] === $images) {
             return;
         }
 
         foreach ($images as $index => $image) {
             $vehicle->images()->create([
                 'path' => $image->store('car-rental/vehicles', 'public'),
-                'is_primary' => $index === 0 && ! $vehicle->images()->exists(),
+                'is_primary' => 0 === $index && ! $vehicle->images()->exists(),
                 'sort_order' => $index,
             ]);
         }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -31,7 +33,7 @@ class ReservationController extends Controller
     public function create(): View
     {
         return view('car-rental.reservations.form', [
-            'reservation' => new Reservation,
+            'reservation' => new Reservation(),
             'vehicles' => Vehicle::query()->orderBy('brand')->orderBy('model')->get(),
             'customers' => Customer::query()->orderBy('first_name')->orderBy('last_name')->get(),
         ]);
@@ -42,7 +44,8 @@ class ReservationController extends Controller
         $reservation = $this->reservationService->create($request->validated());
 
         return redirect()->route('car-rental.reservations.show', $reservation)
-            ->with('status', 'Reservation created successfully.');
+            ->with('status', 'Reservation created successfully.')
+        ;
     }
 
     public function show(Reservation $reservation): View
@@ -66,7 +69,8 @@ class ReservationController extends Controller
         $this->reservationService->update($reservation, $request->validated());
 
         return redirect()->route('car-rental.reservations.show', $reservation)
-            ->with('status', 'Reservation updated successfully.');
+            ->with('status', 'Reservation updated successfully.')
+        ;
     }
 
     public function confirm(Reservation $reservation): RedirectResponse
@@ -84,6 +88,7 @@ class ReservationController extends Controller
         $rental = $this->rentalService->activateFromReservation($reservation);
 
         return redirect()->route('car-rental.rentals.show', $rental)
-            ->with('status', 'Reservation converted to rental successfully.');
+            ->with('status', 'Reservation converted to rental successfully.')
+        ;
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Models;
 
 use App\Models\User;
@@ -107,8 +109,8 @@ class Rental extends Model
 
     public function isOverdue(): bool
     {
-        return $this->status === RentalStatus::Active
-            && $this->actual_returned_at === null
+        return RentalStatus::Active === $this->status
+            && null === $this->actual_returned_at
             && CarbonImmutable::now()->greaterThan($this->ends_at);
     }
 }

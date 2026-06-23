@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Factories\Modules\CarRental\Models;
 
 use App\Models\Modules\CarRental\Models\CustomerDocument;

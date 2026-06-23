@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Services;
 
 use App\Modules\CarRental\Models\Customer;
@@ -10,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 class CustomerService
 {
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function create(array $data): Customer
     {
@@ -24,7 +26,7 @@ class CustomerService
     }
 
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function update(Customer $customer, array $data): Customer
     {
@@ -37,7 +39,7 @@ class CustomerService
     }
 
     /**
-     * @param  array<string, UploadedFile>  $documents
+     * @param array<string, UploadedFile> $documents
      */
     private function storeDocuments(Customer $customer, array $documents): void
     {

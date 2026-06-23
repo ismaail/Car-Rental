@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Modules\CarRental\Http\Controllers\CustomerController;
 use App\Modules\CarRental\Http\Controllers\DashboardController;
 use App\Modules\CarRental\Http\Controllers\DepositController;
@@ -28,4 +30,5 @@ Route::prefix('car-rental')
         Route::patch('deposits/{deposit}', [DepositController::class, 'update'])->name('deposits.update');
         Route::post('payments', [PaymentController::class, 'store'])->name('payments.store');
         Route::get('rentals/{rental}/contract', [RentalController::class, 'contract'])->name('rentals.contract');
-    });
+    })
+;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Enums;
 
 enum UserRole: string
@@ -19,11 +21,11 @@ enum UserRole: string
 
     public function canManageSettings(): bool
     {
-        return $this === self::Admin;
+        return self::Admin === $this;
     }
 
     public function canManageOperations(): bool
     {
-        return $this === self::Admin || $this === self::Manager;
+        return self::Admin === $this || self::Manager === $this;
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Services;
 
 use App\Modules\CarRental\Enums\RentalStatus;
@@ -44,7 +46,8 @@ class AvailabilityService
             ->when($ignoreReservation, fn ($query) => $query->whereKeyNot($ignoreReservation->getKey()))
             ->where('pickup_at', '<', $returnAt)
             ->where('return_at', '>', $pickupAt)
-            ->exists();
+            ->exists()
+        ;
 
         if ($hasReservationConflict) {
             return false;
@@ -56,7 +59,8 @@ class AvailabilityService
             ->when($ignoreRental, fn ($query) => $query->whereKeyNot($ignoreRental->getKey()))
             ->where('starts_at', '<', $returnAt)
             ->where('ends_at', '>', $pickupAt)
-            ->exists();
+            ->exists()
+        ;
 
         return ! $hasRentalConflict;
     }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Http\Requests;
 
 use App\Modules\CarRental\Enums\VehicleStatus;

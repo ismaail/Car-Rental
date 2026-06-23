@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Policies;
 
 use App\Enums\UserRole;
@@ -30,7 +32,7 @@ class ReservationPolicy
 
     public function delete(User $user, Reservation $reservation): bool
     {
-        return $user->role !== UserRole::Agent;
+        return UserRole::Agent !== $user->role;
     }
 
     public function confirm(User $user, Reservation $reservation): bool

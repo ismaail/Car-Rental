@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Factories\Modules\CarRental\Models;
 
 use App\Modules\CarRental\Enums\ReservationStatus;
@@ -22,7 +24,7 @@ class ReservationFactory extends Factory
         $rate = fake()->randomFloat(2, 250, 900);
 
         return [
-            'reservation_number' => 'RES-'.now()->format('Ymd').'-'.fake()->unique()->numberBetween(1000, 9999),
+            'reservation_number' => 'RES-' . now()->format('Ymd') . '-' . fake()->unique()->numberBetween(1000, 9999),
             'vehicle_id' => Vehicle::factory(),
             'customer_id' => Customer::factory(),
             'status' => fake()->randomElement([ReservationStatus::Pending, ReservationStatus::Confirmed]),

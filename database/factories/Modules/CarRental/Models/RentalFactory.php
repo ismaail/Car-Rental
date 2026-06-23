@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Factories\Modules\CarRental\Models;
 
 use App\Modules\CarRental\Enums\RentalStatus;
@@ -23,7 +25,7 @@ class RentalFactory extends Factory
         $days = $startsAt->diffInDays($endsAt);
 
         return [
-            'rental_number' => 'RNT-'.now()->format('Ymd').'-'.fake()->unique()->numberBetween(1000, 9999),
+            'rental_number' => 'RNT-' . now()->format('Ymd') . '-' . fake()->unique()->numberBetween(1000, 9999),
             'vehicle_id' => Vehicle::factory(),
             'customer_id' => Customer::factory(),
             'status' => RentalStatus::Active,

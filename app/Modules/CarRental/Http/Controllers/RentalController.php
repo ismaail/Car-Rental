@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -56,7 +58,7 @@ class RentalController extends Controller
 
         return response($pdf, 200, [
             'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'inline; filename="'.$rental->rental_number.'.pdf"',
+            'Content-Disposition' => 'inline; filename="' . $rental->rental_number . '.pdf"',
         ]);
     }
 }

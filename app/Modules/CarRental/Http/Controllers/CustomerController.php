@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -27,7 +29,7 @@ class CustomerController extends Controller
     public function create(): View
     {
         return view('car-rental.customers.form', [
-            'customer' => new Customer,
+            'customer' => new Customer(),
             'documentLabels' => $this->documentLabels(),
         ]);
     }
@@ -37,7 +39,8 @@ class CustomerController extends Controller
         $customer = $this->customerService->create($request->validated());
 
         return redirect()->route('car-rental.customers.show', $customer)
-            ->with('status', 'Customer created successfully.');
+            ->with('status', 'Customer created successfully.')
+        ;
     }
 
     public function show(Customer $customer): View
@@ -60,7 +63,8 @@ class CustomerController extends Controller
         $this->customerService->update($customer, $request->validated());
 
         return redirect()->route('car-rental.customers.show', $customer)
-            ->with('status', 'Customer updated successfully.');
+            ->with('status', 'Customer updated successfully.')
+        ;
     }
 
     /**
@@ -70,6 +74,7 @@ class CustomerController extends Controller
     {
         return collect(CustomerDocumentType::cases())
             ->mapWithKeys(fn (CustomerDocumentType $type) => [$type->value => str($type->value)->replace('_', ' ')->title()->value()])
-            ->all();
+            ->all()
+        ;
     }
 }

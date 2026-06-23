@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Http\Controllers;
 
 use App\Http\Controllers\Controller;
@@ -27,7 +29,7 @@ class VehicleController extends Controller
     public function create(): View
     {
         return view('car-rental.vehicles.form', [
-            'vehicle' => new Vehicle,
+            'vehicle' => new Vehicle(),
             'statuses' => VehicleStatus::cases(),
         ]);
     }
@@ -37,7 +39,8 @@ class VehicleController extends Controller
         $vehicle = $this->vehicleService->create($request->validated());
 
         return redirect()->route('car-rental.vehicles.show', $vehicle)
-            ->with('status', 'Vehicle created successfully.');
+            ->with('status', 'Vehicle created successfully.')
+        ;
     }
 
     public function show(Vehicle $vehicle): View
@@ -60,6 +63,7 @@ class VehicleController extends Controller
         $this->vehicleService->update($vehicle, $request->validated());
 
         return redirect()->route('car-rental.vehicles.show', $vehicle)
-            ->with('status', 'Vehicle updated successfully.');
+            ->with('status', 'Vehicle updated successfully.')
+        ;
     }
 }

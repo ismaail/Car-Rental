@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\CarRental\Http\Requests;
 
 use App\Modules\CarRental\Enums\CustomerDocumentType;
@@ -43,6 +45,7 @@ class CustomerRequest extends FormRequest
     {
         return collect(CustomerDocumentType::cases())
             ->mapWithKeys(fn (CustomerDocumentType $type) => [$type->value => str($type->value)->replace('_', ' ')->title()->value()])
-            ->all();
+            ->all()
+        ;
     }
 }
