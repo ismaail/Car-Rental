@@ -29,6 +29,8 @@
 		"yoda_style": true
 	},
 	"exclude": [
-		"docs"
+		"docs",
+		"stubs",
+		"storage"
 	]
 }
