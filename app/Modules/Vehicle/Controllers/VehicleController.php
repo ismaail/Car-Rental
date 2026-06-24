@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\CarRental\Http\Controllers;
+namespace App\Modules\Vehicle\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Modules\CarRental\Http\Requests\VehicleRequest;
 use App\Modules\CarRental\Services\VehicleService;
 use App\Modules\Vehicle\Models\Vehicle;
+use App\Modules\Vehicle\Requests\VehicleRequest;
 use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;

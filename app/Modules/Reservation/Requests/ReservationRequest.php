@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\CarRental\Http\Requests;
+namespace App\Modules\Reservation\Requests;
 
 use App\Modules\Vehicle\Rules\Available;
 use Illuminate\Foundation\Http\FormRequest;

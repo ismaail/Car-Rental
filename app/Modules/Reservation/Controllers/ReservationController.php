@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\CarRental\Http\Controllers;
+namespace App\Modules\Reservation\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Modules\CarRental\Http\Requests\ReservationRequest;
 use App\Modules\CarRental\Services\RentalService;
 use App\Modules\CarRental\Services\ReservationService;
 use App\Modules\Customer\Models\Customer;
 use App\Modules\Reservation\Actions\CreateReservationAction;
 use App\Modules\Reservation\DataObjects\ReservationData;
 use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Requests\ReservationRequest;
 use App\Modules\Vehicle\Models\Vehicle;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;

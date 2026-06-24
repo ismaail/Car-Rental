@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\Reservation\DataObjects;
 
-use App\Modules\CarRental\Http\Requests\ReservationRequest;
+use App\Modules\Reservation\Requests\ReservationRequest;
 use Carbon\Carbon;
 
 class ReservationData

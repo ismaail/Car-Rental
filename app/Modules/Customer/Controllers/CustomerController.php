@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\CarRental\Http\Controllers;
+namespace App\Modules\Customer\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Modules\CarRental\Http\Requests\CustomerRequest;
 use App\Modules\CarRental\Services\CustomerService;
 use App\Modules\Customer\Models\Customer;
+use App\Modules\Customer\Requests\CustomerRequest;
 use App\Modules\Customer\Types\CustomerDocumentType;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;

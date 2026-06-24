@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-use App\Modules\CarRental\Http\Controllers\CustomerController;
 use App\Modules\CarRental\Http\Controllers\DashboardController;
 use App\Modules\CarRental\Http\Controllers\DepositController;
 use App\Modules\CarRental\Http\Controllers\InspectionController;
 use App\Modules\CarRental\Http\Controllers\PaymentController;
 use App\Modules\CarRental\Http\Controllers\RentalController;
-use App\Modules\CarRental\Http\Controllers\ReservationController;
-use App\Modules\CarRental\Http\Controllers\VehicleController;
+use App\Modules\Customer\Controllers\CustomerController;
+use App\Modules\Reservation\Controllers\ReservationController;
+use App\Modules\Vehicle\Controllers\VehicleController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('car-rental')

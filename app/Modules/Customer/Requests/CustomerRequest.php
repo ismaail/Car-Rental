@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\CarRental\Http\Requests;
+namespace App\Modules\Customer\Requests;
 
 use App\Modules\Customer\Types\CustomerDocumentType;
 use Illuminate\Foundation\Http\FormRequest;

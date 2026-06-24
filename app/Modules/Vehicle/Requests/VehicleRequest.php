@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\CarRental\Http\Requests;
+namespace App\Modules\Vehicle\Requests;
 
 use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Foundation\Http\FormRequest;
