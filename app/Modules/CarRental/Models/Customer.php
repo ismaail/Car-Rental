@@ -53,16 +53,25 @@ class Customer extends Model
         ];
     }
 
+    /**
+     * @return HasMany<CustomerDocument, $this>
+     */
     public function documents(): HasMany
     {
         return $this->hasMany(CustomerDocument::class);
     }
 
+    /**
+     * @return HasMany<Reservation, $this>
+     */
     public function reservations(): HasMany
     {
         return $this->hasMany(Reservation::class);
     }
 
+    /**
+     * @return HasMany<Rental, $this>
+     */
     public function rentals(): HasMany
     {
         return $this->hasMany(Rental::class);

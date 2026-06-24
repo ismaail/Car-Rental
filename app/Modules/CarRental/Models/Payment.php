@@ -46,11 +46,17 @@ class Payment extends Model
         ];
     }
 
+    /**
+     * @return BelongsTo<Rental, $this>
+     */
     public function rental(): BelongsTo
     {
         return $this->belongsTo(Rental::class);
     }
 
+    /**
+     * @return BelongsTo<Deposit, $this>
+     */
     public function deposit(): BelongsTo
     {
         return $this->belongsTo(Deposit::class);

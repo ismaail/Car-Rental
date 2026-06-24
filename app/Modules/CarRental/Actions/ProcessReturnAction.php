@@ -37,7 +37,7 @@ class ProcessReturnAction
 
             $rental->vehicle->update([
                 'status' => VehicleStatus::Available,
-                'mileage' => $rental->inspections->sortByDesc('inspected_at')->first()?->mileage ?? $rental->vehicle->mileage,
+                'mileage' => $rental->inspections->sortByDesc('inspected_at')->first()->mileage ?? $rental->vehicle->mileage,
             ]);
 
             $rental->deposit()->where('status', DepositStatus::Collected)->update([

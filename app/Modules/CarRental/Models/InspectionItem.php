@@ -38,6 +38,9 @@ class InspectionItem extends Model
         ];
     }
 
+    /**
+     * @return BelongsTo<Inspection, $this>
+     */
     public function inspection(): BelongsTo
     {
         return $this->belongsTo(Inspection::class);
