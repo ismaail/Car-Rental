@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\CarRental\Models;
 
+use App\Modules\Reservations\Models\Reservation;
 use Database\Factories\Modules\CarRental\Models\CustomerFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

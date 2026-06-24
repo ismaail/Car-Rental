@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\CarRental\Models;
+namespace App\Modules\Reservations\Models;
 
 use App\Models\User;
+use App\Modules\CarRental\Models\Customer;
+use App\Modules\CarRental\Models\Vehicle;
 use App\Modules\Reservations\Types\ReservationStatus;
 use Carbon\CarbonInterface;
 use Database\Factories\Modules\CarRental\Models\ReservationFactory;

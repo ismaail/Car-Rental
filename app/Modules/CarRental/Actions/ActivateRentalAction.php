@@ -6,9 +6,9 @@ namespace App\Modules\CarRental\Actions;
 
 use App\Modules\CarRental\Enums\RentalStatus;
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\CarRental\Models\Reservation;
 use App\Modules\CarRental\Services\AvailabilityService;
 use App\Modules\CarRental\Services\NumberGeneratorService;
+use App\Modules\Reservations\Models\Reservation;
 use App\Modules\Reservations\Types\ReservationStatus;
 use App\Modules\Vehicles\Types\VehicleStatus;
 use Illuminate\Support\Facades\Auth;

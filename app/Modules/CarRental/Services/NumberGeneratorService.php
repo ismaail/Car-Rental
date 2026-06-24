@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Modules\CarRental\Services;
 
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\CarRental\Models\Reservation;
+use App\Modules\Reservations\Models\Reservation;
 
 class NumberGeneratorService
 {

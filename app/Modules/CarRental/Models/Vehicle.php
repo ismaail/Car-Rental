@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\CarRental\Models;
 
+use App\Modules\Reservations\Models\Reservation;
 use App\Modules\Vehicles\Types\VehicleStatus;
 use Database\Factories\Modules\CarRental\Models\VehicleFactory;
 use Illuminate\Database\Eloquent\Attributes\Scope;

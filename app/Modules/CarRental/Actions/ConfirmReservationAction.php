@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Modules\CarRental\Actions;
 
-use App\Modules\CarRental\Models\Reservation;
 use App\Modules\CarRental\Services\AvailabilityService;
+use App\Modules\Reservations\Models\Reservation;
 use App\Modules\Reservations\Types\ReservationStatus;
 use App\Modules\Vehicles\Types\VehicleStatus;
 use Illuminate\Support\Facades\DB;

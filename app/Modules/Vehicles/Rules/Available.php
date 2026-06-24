@@ -6,8 +6,8 @@ namespace App\Modules\Vehicles\Rules;
 
 use App\Modules\CarRental\Enums\RentalStatus;
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\CarRental\Models\Reservation;
 use App\Modules\CarRental\Models\Vehicle;
+use App\Modules\Reservations\Models\Reservation;
 use App\Modules\Reservations\Types\ReservationStatus;
 use App\Modules\Vehicles\Types\VehicleStatus;
 use Closure;
