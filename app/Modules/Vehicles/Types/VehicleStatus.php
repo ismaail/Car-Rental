@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\CarRental\Enums;
+namespace App\Modules\Vehicles\Types;
 
 enum VehicleStatus: string
 {

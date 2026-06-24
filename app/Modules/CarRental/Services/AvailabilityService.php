@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace App\Modules\CarRental\Services;
 
 use App\Modules\CarRental\Enums\RentalStatus;
-use App\Modules\CarRental\Enums\VehicleStatus;
 use App\Modules\CarRental\Models\Rental;
 use App\Modules\CarRental\Models\Reservation;
 use App\Modules\CarRental\Models\Vehicle;
 use App\Modules\Reservations\Types\ReservationStatus;
+use App\Modules\Vehicles\Types\VehicleStatus;
 use Carbon\CarbonInterface;
 use Illuminate\Validation\ValidationException;
 

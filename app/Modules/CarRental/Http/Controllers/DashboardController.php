@@ -6,11 +6,11 @@ namespace App\Modules\CarRental\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Modules\CarRental\Enums\RentalStatus;
-use App\Modules\CarRental\Enums\VehicleStatus;
 use App\Modules\CarRental\Models\Customer;
 use App\Modules\CarRental\Models\Rental;
 use App\Modules\CarRental\Models\Reservation;
 use App\Modules\CarRental\Models\Vehicle;
+use App\Modules\Vehicles\Types\VehicleStatus;
 use Illuminate\Contracts\View\View;
 
 class DashboardController extends Controller

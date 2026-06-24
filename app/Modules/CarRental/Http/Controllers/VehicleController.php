@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace App\Modules\CarRental\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Modules\CarRental\Enums\VehicleStatus;
 use App\Modules\CarRental\Http\Requests\VehicleRequest;
 use App\Modules\CarRental\Models\Vehicle;
 use App\Modules\CarRental\Services\VehicleService;
+use App\Modules\Vehicles\Types\VehicleStatus;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 

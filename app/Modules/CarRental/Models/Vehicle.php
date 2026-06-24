@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\CarRental\Models;
 
-use App\Modules\CarRental\Enums\VehicleStatus;
+use App\Modules\Vehicles\Types\VehicleStatus;
 use Database\Factories\Modules\CarRental\Models\VehicleFactory;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Builder;
