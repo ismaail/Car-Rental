@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Modules\CarRental\Models;
 
 use App\Models\User;
-use App\Modules\CarRental\Enums\ReservationStatus;
+use App\Modules\Reservations\Types\ReservationStatus;
 use Carbon\CarbonInterface;
 use Database\Factories\Modules\CarRental\Models\ReservationFactory;
 use Illuminate\Database\Eloquent\Attributes\Scope;

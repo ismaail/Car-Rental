@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Modules\CarRental\Actions;
 
-use App\Modules\CarRental\Enums\ReservationStatus;
 use App\Modules\CarRental\Enums\VehicleStatus;
 use App\Modules\CarRental\Models\Reservation;
 use App\Modules\CarRental\Services\AvailabilityService;
+use App\Modules\Reservations\Types\ReservationStatus;
 use Illuminate\Support\Facades\DB;
 
 class ConfirmReservationAction
