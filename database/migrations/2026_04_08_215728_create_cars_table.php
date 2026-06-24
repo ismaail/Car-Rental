@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Models\Cars\Brand;
-use App\Models\Cars\Modele;
+use App\Modules\Vehicles\Models\Brand;
+use App\Modules\Vehicles\Models\Modele;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;

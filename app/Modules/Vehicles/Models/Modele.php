@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Models\Cars;
+namespace App\Modules\Vehicles\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @mixin IdeHelperBrand
+ * @mixin IdeHelperModele
  */
-class Brand extends Model
+class Modele extends Model
 {
     //
 }
