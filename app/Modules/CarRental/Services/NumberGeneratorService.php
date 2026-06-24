@@ -12,6 +12,7 @@ class NumberGeneratorService
     public function nextReservationNumber(): string
     {
         $prefix = 'RES-' . now()->format('Ymd');
+        /** @var ?string $lastNumber */
         $lastNumber = Reservation::query()
             ->where('reservation_number', 'like', $prefix . '-%')
             ->latest('id')
@@ -26,6 +27,7 @@ class NumberGeneratorService
     public function nextRentalNumber(): string
     {
         $prefix = 'RNT-' . now()->format('Ymd');
+        /** @var ?string $lastNumber */
         $lastNumber = Rental::query()
             ->where('rental_number', 'like', $prefix . '-%')
             ->latest('id')

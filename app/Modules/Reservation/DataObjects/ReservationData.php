@@ -24,15 +24,21 @@ class ReservationData
     public static function fromRequest(ReservationRequest $request): self
     {
         return new self(
-            vehicleId: (int)$request->validated('vehicle_id'),
-            customerId: (int)$request->validated('customer_id'),
-            pickupAt: Carbon::parse($request->validated('pickup_at')),
-            returnAt: Carbon::parse($request->validated('return_at')),
-            dailyRate: (float)$request->validated('daily_rate'),
-            estimatedTotal: (float)$request->validated('estimated_total'),
-            pickupLocation: $request->validated('pickup_location'),
-            returnLocation: $request->validated('return_location'),
-            notes: $request->validated('notes'),
+            vehicleId: $request->integer('vehicle_id'),
+            customerId: $request->integer('customer_id'),
+            pickupAt: Carbon::parse($request->string('pickup_at')->toString()),
+            returnAt: Carbon::parse($request->string('return_at')->toString()),
+            dailyRate: $request->float('daily_rate'),
+            estimatedTotal: $request->float('estimated_total'),
+            pickupLocation: $request->filled('pickup_location')
+                ? $request->string('pickup_location')->toString()
+                : null,
+            returnLocation: $request->filled('return_location')
+                ? $request->string('return_location')->toString() :
+                null,
+            notes: $request->filled('notes')
+                ? $request->string('notes')->toString()
+                : null,
         );
     }
 }

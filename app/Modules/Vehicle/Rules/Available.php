@@ -40,6 +40,7 @@ class Available implements DataAwareRule, ValidationRule
 
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
+        /** @var Vehicle $vehicle */
         $vehicle = Vehicle::query()->select(['id', 'status'])->findOrFail(id: $this->data['vehicle_id']);
 
         if (in_array($vehicle->status, [VehicleStatus::Maintenance, VehicleStatus::Unavailable], true)) {
@@ -60,7 +61,7 @@ class Available implements DataAwareRule, ValidationRule
         return Reservation::query()
             ->whereBelongsTo($vehicle)
             ->whereIn('status', [ReservationStatus::Pending, ReservationStatus::Confirmed])
-            ->when($this->ignoreReservation, fn ($query) => $query->whereKeyNot($this->ignoreReservation->getKey()))
+            ->when($this->ignoreReservation, fn ($query) => $query->whereKeyNot($this->ignoreReservation?->getKey()))
             ->where('pickup_at', '<', $this->data['return_at'])
             ->where('return_at', '>', $this->data['pickup_at'])
             ->exists()
@@ -72,7 +73,7 @@ class Available implements DataAwareRule, ValidationRule
         return Rental::query()
             ->whereBelongsTo($vehicle)
             ->whereIn('status', [RentalStatus::Draft, RentalStatus::Active, RentalStatus::Overdue])
-            ->when($this->ignoreRental, fn ($query) => $query->whereKeyNot($this->ignoreRental->getKey()))
+            ->when($this->ignoreRental, fn ($query) => $query->whereKeyNot($this->ignoreRental?->getKey()))
             ->where('starts_at', '<', $this->data['return_at'])
             ->where('ends_at', '>', $this->data['pickup_at'])
             ->exists()
