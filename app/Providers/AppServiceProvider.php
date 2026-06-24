@@ -6,12 +6,12 @@ namespace App\Providers;
 
 use App\Modules\CarRental\Models\Customer;
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\CarRental\Policies\CustomerPolicy;
 use App\Modules\CarRental\Policies\RentalPolicy;
-use App\Modules\CarRental\Policies\ReservationPolicy;
-use App\Modules\CarRental\Policies\VehiclePolicy;
+use App\Modules\Customer\Policies\CustomerPolicy;
 use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Policies\ReservationPolicy;
 use App\Modules\Vehicle\Models\Vehicle;
+use App\Modules\Vehicle\Policies\VehiclePolicy;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;

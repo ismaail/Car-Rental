@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\CarRental\Policies;
+namespace App\Modules\Vehicle\Policies;
 
 use App\Enums\UserRole;
 use App\Models\User;
