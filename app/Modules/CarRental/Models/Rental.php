@@ -6,6 +6,7 @@ namespace App\Modules\CarRental\Models;
 
 use App\Models\User;
 use App\Modules\CarRental\Enums\RentalStatus;
+use App\Modules\Customer\Models\Customer;
 use App\Modules\Reservation\Models\Reservation;
 use App\Modules\Vehicle\Models\Vehicle;
 use Carbon\CarbonImmutable;

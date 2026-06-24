@@ -2,10 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\CarRental\Models;
+namespace App\Modules\Customer\Models;
 
+use App\Modules\CarRental\Models\Rental;
 use App\Modules\Reservation\Models\Reservation;
 use Database\Factories\Modules\CarRental\Models\CustomerFactory;
+use Illuminate\Database\Eloquent\Attributes\UseFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -13,6 +15,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * @mixin IdeHelperCustomer
  */
+#[UseFactory(CustomerFactory::class)]
 class Customer extends Model
 {
     /** @use HasFactory<CustomerFactory> */

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Modules\CarRental\Models\Customer;
 use App\Modules\CarRental\Models\Rental;
 use App\Modules\CarRental\Policies\RentalPolicy;
+use App\Modules\Customer\Models\Customer;
 use App\Modules\Customer\Policies\CustomerPolicy;
 use App\Modules\Reservation\Models\Reservation;
 use App\Modules\Reservation\Policies\ReservationPolicy;

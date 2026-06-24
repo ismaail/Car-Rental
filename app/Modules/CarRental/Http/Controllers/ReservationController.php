@@ -6,9 +6,9 @@ namespace App\Modules\CarRental\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Modules\CarRental\Http\Requests\ReservationRequest;
-use App\Modules\CarRental\Models\Customer;
 use App\Modules\CarRental\Services\RentalService;
 use App\Modules\CarRental\Services\ReservationService;
+use App\Modules\Customer\Models\Customer;
 use App\Modules\Reservation\Actions\CreateReservationAction;
 use App\Modules\Reservation\DataObjects\ReservationData;
 use App\Modules\Reservation\Models\Reservation;

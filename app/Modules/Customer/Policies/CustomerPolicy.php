@@ -6,7 +6,7 @@ namespace App\Modules\Customer\Policies;
 
 use App\Enums\UserRole;
 use App\Models\User;
-use App\Modules\CarRental\Models\Customer;
+use App\Modules\Customer\Models\Customer;
 
 class CustomerPolicy
 {

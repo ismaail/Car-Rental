@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Factories\Modules\CarRental\Models;
 
-use App\Modules\CarRental\Models\Customer;
+use App\Modules\Customer\Models\Customer;
 use App\Modules\Reservation\Models\Reservation;
 use App\Modules\Reservation\Types\ReservationStatus;
 use App\Modules\Vehicle\Models\Vehicle;

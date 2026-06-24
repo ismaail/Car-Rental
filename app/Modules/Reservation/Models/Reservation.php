@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Modules\Reservation\Models;
 
 use App\Models\User;
-use App\Modules\CarRental\Models\Customer;
+use App\Modules\Customer\Models\Customer;
 use App\Modules\Reservation\Types\ReservationStatus;
 use App\Modules\Vehicle\Models\Vehicle;
 use Carbon\CarbonInterface;

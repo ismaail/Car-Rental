@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\CarRental\Http\Requests;
 
-use App\Modules\CarRental\Enums\CustomerDocumentType;
+use App\Modules\Customer\Types\CustomerDocumentType;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CustomerRequest extends FormRequest
