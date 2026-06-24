@@ -6,7 +6,7 @@ namespace App\Modules\CarRental\Policies;
 
 use App\Enums\UserRole;
 use App\Models\User;
-use App\Modules\CarRental\Models\Vehicle;
+use App\Modules\Vehicles\Models\Vehicle;
 
 class VehiclePolicy
 {

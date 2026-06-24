@@ -2,12 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\CarRental\Models;
+namespace App\Modules\Vehicles\Models;
 
+use App\Modules\CarRental\Models\Rental;
 use App\Modules\Reservations\Models\Reservation;
 use App\Modules\Vehicles\Types\VehicleStatus;
 use Database\Factories\Modules\CarRental\Models\VehicleFactory;
 use Illuminate\Database\Eloquent\Attributes\Scope;
+use Illuminate\Database\Eloquent\Attributes\UseFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,6 +18,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * @mixin IdeHelperVehicle
  */
+#[UseFactory(VehicleFactory::class)]
 class Vehicle extends Model
 {
     /** @use HasFactory<VehicleFactory> */

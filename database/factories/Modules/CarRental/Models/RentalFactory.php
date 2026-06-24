@@ -7,7 +7,7 @@ namespace Database\Factories\Modules\CarRental\Models;
 use App\Modules\CarRental\Enums\RentalStatus;
 use App\Modules\CarRental\Models\Customer;
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\CarRental\Models\Vehicle;
+use App\Modules\Vehicles\Models\Vehicle;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

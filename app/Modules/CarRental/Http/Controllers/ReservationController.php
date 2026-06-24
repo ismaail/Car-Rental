@@ -7,12 +7,12 @@ namespace App\Modules\CarRental\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Modules\CarRental\Http\Requests\ReservationRequest;
 use App\Modules\CarRental\Models\Customer;
-use App\Modules\CarRental\Models\Vehicle;
 use App\Modules\CarRental\Services\RentalService;
 use App\Modules\CarRental\Services\ReservationService;
 use App\Modules\Reservations\Action\CreateReservationAction;
 use App\Modules\Reservations\DataObjects\ReservationData;
 use App\Modules\Reservations\Models\Reservation;
+use App\Modules\Vehicles\Models\Vehicle;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 

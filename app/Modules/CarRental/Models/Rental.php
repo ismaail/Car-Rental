@@ -7,6 +7,7 @@ namespace App\Modules\CarRental\Models;
 use App\Models\User;
 use App\Modules\CarRental\Enums\RentalStatus;
 use App\Modules\Reservations\Models\Reservation;
+use App\Modules\Vehicles\Models\Vehicle;
 use Carbon\CarbonImmutable;
 use Database\Factories\Modules\CarRental\Models\RentalFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

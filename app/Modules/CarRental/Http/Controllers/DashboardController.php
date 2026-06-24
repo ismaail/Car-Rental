@@ -8,8 +8,8 @@ use App\Http\Controllers\Controller;
 use App\Modules\CarRental\Enums\RentalStatus;
 use App\Modules\CarRental\Models\Customer;
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\CarRental\Models\Vehicle;
 use App\Modules\Reservations\Models\Reservation;
+use App\Modules\Vehicles\Models\Vehicle;
 use App\Modules\Vehicles\Types\VehicleStatus;
 use Illuminate\Contracts\View\View;
 
