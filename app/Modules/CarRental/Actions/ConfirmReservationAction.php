@@ -10,6 +10,9 @@ use App\Modules\Reservation\Types\ReservationStatus;
 use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * @deprecated
+ */
 class ConfirmReservationAction
 {
     public function __construct(private readonly AvailabilityService $availabilityService) {}

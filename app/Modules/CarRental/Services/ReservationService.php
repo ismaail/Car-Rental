@@ -11,6 +11,9 @@ use App\Modules\Vehicle\Models\Vehicle;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * @deprecated
+ */
 class ReservationService
 {
     public function __construct(
@@ -21,8 +24,6 @@ class ReservationService
 
     /**
      * @param array<string, mixed> $data
-     *
-     * @deprecated
      */
     public function create(array $data): Reservation
     {
