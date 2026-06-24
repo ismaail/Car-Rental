@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\CarRental\Http\Requests;
 
-use App\Modules\Vehicles\Rules\Available;
+use App\Modules\Vehicle\Rules\Available;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ReservationRequest extends FormRequest

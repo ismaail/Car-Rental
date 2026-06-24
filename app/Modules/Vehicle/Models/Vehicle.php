@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Vehicles\Models;
+namespace App\Modules\Vehicle\Models;
 
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\Reservations\Models\Reservation;
-use App\Modules\Vehicles\Types\VehicleStatus;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Database\Factories\Modules\CarRental\Models\VehicleFactory;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Attributes\UseFactory;

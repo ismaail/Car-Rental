@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Reservations\Action;
+namespace App\Modules\Reservation\Actions;
 
 use App\Models\User;
 use App\Modules\CarRental\Services\NumberGeneratorService;
-use App\Modules\Reservations\DataObjects\ReservationData;
-use App\Modules\Reservations\Models\Reservation;
-use App\Modules\Reservations\Types\ReservationStatus;
+use App\Modules\Reservation\DataObjects\ReservationData;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Types\ReservationStatus;
 use Illuminate\Container\Attributes\CurrentUser;
 use Lorisleiva\Actions\Concerns\AsAction;
 

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Reservations\Models;
+namespace App\Modules\Reservation\Models;
 
 use App\Models\User;
 use App\Modules\CarRental\Models\Customer;
-use App\Modules\Reservations\Types\ReservationStatus;
-use App\Modules\Vehicles\Models\Vehicle;
+use App\Modules\Reservation\Types\ReservationStatus;
+use App\Modules\Vehicle\Models\Vehicle;
 use Carbon\CarbonInterface;
 use Database\Factories\Modules\CarRental\Models\ReservationFactory;
 use Illuminate\Database\Eloquent\Attributes\Scope;

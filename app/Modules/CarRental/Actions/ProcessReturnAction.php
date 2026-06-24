@@ -8,7 +8,7 @@ use App\Modules\CarRental\Enums\DepositStatus;
 use App\Modules\CarRental\Enums\InspectionType;
 use App\Modules\CarRental\Enums\RentalStatus;
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\Vehicles\Types\VehicleStatus;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 

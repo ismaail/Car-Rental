@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Modules\CarRental\Actions;
 
 use App\Modules\CarRental\Services\AvailabilityService;
-use App\Modules\Reservations\Models\Reservation;
-use App\Modules\Reservations\Types\ReservationStatus;
-use App\Modules\Vehicles\Types\VehicleStatus;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Types\ReservationStatus;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Support\Facades\DB;
 
 class ConfirmReservationAction

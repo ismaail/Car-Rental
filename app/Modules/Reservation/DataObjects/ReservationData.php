@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Reservations\DataObjects;
+namespace App\Modules\Reservation\DataObjects;
 
 use App\Modules\CarRental\Http\Requests\ReservationRequest;
 use Carbon\Carbon;

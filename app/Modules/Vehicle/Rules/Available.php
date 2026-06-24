@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Vehicles\Rules;
+namespace App\Modules\Vehicle\Rules;
 
 use App\Modules\CarRental\Enums\RentalStatus;
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\Reservations\Models\Reservation;
-use App\Modules\Reservations\Types\ReservationStatus;
-use App\Modules\Vehicles\Models\Vehicle;
-use App\Modules\Vehicles\Types\VehicleStatus;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Types\ReservationStatus;
+use App\Modules\Vehicle\Models\Vehicle;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Closure;
 use Illuminate\Contracts\Validation\DataAwareRule;
 use Illuminate\Contracts\Validation\ValidationRule;

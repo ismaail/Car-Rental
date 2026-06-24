@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\CarRental\Http\Requests;
 
-use App\Modules\Vehicles\Types\VehicleStatus;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 

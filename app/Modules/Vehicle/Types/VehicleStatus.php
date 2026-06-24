@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Vehicles\Types;
+namespace App\Modules\Vehicle\Types;
 
 enum VehicleStatus: string
 {

@@ -6,7 +6,7 @@ namespace App\Modules\CarRental\Policies;
 
 use App\Enums\UserRole;
 use App\Models\User;
-use App\Modules\Reservations\Models\Reservation;
+use App\Modules\Reservation\Models\Reservation;
 
 class ReservationPolicy
 {

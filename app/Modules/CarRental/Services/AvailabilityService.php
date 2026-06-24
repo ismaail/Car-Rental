@@ -6,10 +6,10 @@ namespace App\Modules\CarRental\Services;
 
 use App\Modules\CarRental\Enums\RentalStatus;
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\Reservations\Models\Reservation;
-use App\Modules\Reservations\Types\ReservationStatus;
-use App\Modules\Vehicles\Models\Vehicle;
-use App\Modules\Vehicles\Types\VehicleStatus;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Types\ReservationStatus;
+use App\Modules\Vehicle\Models\Vehicle;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Carbon\CarbonInterface;
 use Illuminate\Validation\ValidationException;
 

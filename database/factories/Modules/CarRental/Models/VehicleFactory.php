@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Database\Factories\Modules\CarRental\Models;
 
-use App\Modules\Vehicles\Models\Vehicle;
-use App\Modules\Vehicles\Types\VehicleStatus;
+use App\Modules\Vehicle\Models\Vehicle;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

@@ -5,9 +5,9 @@ declare(strict_types=1);
 use App\Enums\UserRole;
 use App\Models\User;
 use App\Modules\CarRental\Models\Customer;
-use App\Modules\Reservations\Models\Reservation;
-use App\Modules\Reservations\Types\ReservationStatus;
-use App\Modules\Vehicles\Models\Vehicle;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Types\ReservationStatus;
+use App\Modules\Vehicle\Models\Vehicle;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 uses(RefreshDatabase::class);

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Vehicles\Models;
+namespace App\Modules\Vehicle\Models;
 
 use Database\Factories\Modules\CarRental\Models\VehicleImageFactory;
 use Illuminate\Database\Eloquent\Attributes\UseFactory;
