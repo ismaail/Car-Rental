@@ -8,9 +8,11 @@ use App\Http\Controllers\Controller;
 use App\Modules\CarRental\Services\RentalService;
 use App\Modules\CarRental\Services\ReservationService;
 use App\Modules\Customer\Models\Customer;
+use App\Modules\Reservation\Actions\ConfirmReservationAction;
 use App\Modules\Reservation\Actions\CreateReservationAction;
 use App\Modules\Reservation\DataObjects\ReservationData;
 use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Requests\ReservationConfirmRequest;
 use App\Modules\Reservation\Requests\ReservationRequest;
 use App\Modules\Vehicle\Models\Vehicle;
 use Illuminate\Contracts\View\View;
@@ -77,10 +79,9 @@ class ReservationController extends Controller
         ;
     }
 
-    public function confirm(Reservation $reservation): RedirectResponse
+    public function confirm(ReservationConfirmRequest $request, Reservation $reservation): RedirectResponse
     {
-        $this->authorize('confirm', $reservation);
-        $this->reservationService->confirm($reservation);
+        ConfirmReservationAction::run($reservation);
 
         return back()->with('status', 'Reservation confirmed successfully.');
     }
