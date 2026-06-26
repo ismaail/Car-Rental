@@ -29,8 +29,10 @@
 		"yoda_style": true
 	},
 	"exclude": [
-		"docs",
-		"stubs",
-		"storage"
+		"node_modules",
+		"public",
+		"resources",
+		"storage",
+		"stubs"
 	]
 }
