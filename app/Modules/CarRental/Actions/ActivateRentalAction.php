@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace App\Modules\CarRental\Actions;
 
 use App\Modules\CarRental\Enums\RentalStatus;
-use App\Modules\CarRental\Enums\ReservationStatus;
-use App\Modules\CarRental\Enums\VehicleStatus;
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\CarRental\Models\Reservation;
 use App\Modules\CarRental\Services\AvailabilityService;
 use App\Modules\CarRental\Services\NumberGeneratorService;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Types\ReservationStatus;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;

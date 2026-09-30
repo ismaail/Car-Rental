@@ -7,8 +7,8 @@ namespace App\Modules\CarRental\Actions;
 use App\Modules\CarRental\Enums\DepositStatus;
 use App\Modules\CarRental\Enums\InspectionType;
 use App\Modules\CarRental\Enums\RentalStatus;
-use App\Modules\CarRental\Enums\VehicleStatus;
 use App\Modules\CarRental\Models\Rental;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
@@ -37,7 +37,7 @@ class ProcessReturnAction
 
             $rental->vehicle->update([
                 'status' => VehicleStatus::Available,
-                'mileage' => $rental->inspections->sortByDesc('inspected_at')->first()?->mileage ?? $rental->vehicle->mileage,
+                'mileage' => $rental->inspections->sortByDesc('inspected_at')->first()->mileage ?? $rental->vehicle->mileage,
             ]);
 
             $rental->deposit()->where('status', DepositStatus::Collected)->update([

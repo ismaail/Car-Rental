@@ -26,6 +26,9 @@ class InspectionPhoto extends Model
         'caption',
     ];
 
+    /**
+     * @return BelongsTo<Inspection, $this>
+     */
     public function inspection(): BelongsTo
     {
         return $this->belongsTo(Inspection::class);

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Database\Factories\Modules\CarRental\Models;
 
-use App\Modules\CarRental\Enums\ReservationStatus;
-use App\Modules\CarRental\Models\Customer;
-use App\Modules\CarRental\Models\Reservation;
-use App\Modules\CarRental\Models\Vehicle;
+use App\Modules\Customer\Models\Customer;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Types\ReservationStatus;
+use App\Modules\Vehicle\Models\Vehicle;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

@@ -1,3 +1,6 @@
+includes:
+	- vendor/larastan/larastan/extension.neon
+
 parameters:
 	phpVersion: 80500
 
@@ -14,7 +17,7 @@ parameters:
 		- stubs/ModelHelper.php
 
 	# Level 9 is the highest level
-	level: 6
+	level: 9
 
 	ignoreErrors:
 		#- '#no value type specified in iterable type array#'

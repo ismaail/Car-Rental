@@ -8,7 +8,7 @@ use App\Modules\CarRental\Actions\ActivateRentalAction;
 use App\Modules\CarRental\Actions\ProcessReturnAction;
 use App\Modules\CarRental\Enums\RentalStatus;
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\CarRental\Models\Reservation;
+use App\Modules\Reservation\Models\Reservation;
 
 class RentalService
 {

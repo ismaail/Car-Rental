@@ -5,12 +5,15 @@ declare(strict_types=1);
 namespace App\Modules\CarRental\Services;
 
 use App\Modules\CarRental\Actions\ConfirmReservationAction;
-use App\Modules\CarRental\Enums\ReservationStatus;
-use App\Modules\CarRental\Models\Reservation;
-use App\Modules\CarRental\Models\Vehicle;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Types\ReservationStatus;
+use App\Modules\Vehicle\Models\Vehicle;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * @deprecated
+ */
 class ReservationService
 {
     public function __construct(

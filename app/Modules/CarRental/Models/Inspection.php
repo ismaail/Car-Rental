@@ -43,16 +43,25 @@ class Inspection extends Model
         ];
     }
 
+    /**
+     * @return BelongsTo<Rental, $this>
+     */
     public function rental(): BelongsTo
     {
         return $this->belongsTo(Rental::class);
     }
 
+    /**
+     * @return HasMany<InspectionItem, $this>
+     */
     public function items(): HasMany
     {
         return $this->hasMany(InspectionItem::class);
     }
 
+    /**
+     * @return HasMany<InspectionPhoto, $this>
+     */
     public function photos(): HasMany
     {
         return $this->hasMany(InspectionPhoto::class);

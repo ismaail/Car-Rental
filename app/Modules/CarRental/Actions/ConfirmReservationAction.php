@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 namespace App\Modules\CarRental\Actions;
 
-use App\Modules\CarRental\Enums\ReservationStatus;
-use App\Modules\CarRental\Enums\VehicleStatus;
-use App\Modules\CarRental\Models\Reservation;
 use App\Modules\CarRental\Services\AvailabilityService;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Types\ReservationStatus;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * @deprecated
+ */
 class ConfirmReservationAction
 {
     public function __construct(private readonly AvailabilityService $availabilityService) {}

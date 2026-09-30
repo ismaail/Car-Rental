@@ -6,13 +6,13 @@ use App\Enums\UserRole;
 use App\Models\User;
 use App\Modules\CarRental\Enums\DepositStatus;
 use App\Modules\CarRental\Enums\InspectionType;
-use App\Modules\CarRental\Enums\ReservationStatus;
-use App\Modules\CarRental\Enums\VehicleStatus;
-use App\Modules\CarRental\Models\Customer;
 use App\Modules\CarRental\Models\Rental;
-use App\Modules\CarRental\Models\Reservation;
-use App\Modules\CarRental\Models\Vehicle;
 use App\Modules\CarRental\Services\RentalService;
+use App\Modules\Customer\Models\Customer;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Reservation\Types\ReservationStatus;
+use App\Modules\Vehicle\Models\Vehicle;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 uses(RefreshDatabase::class);

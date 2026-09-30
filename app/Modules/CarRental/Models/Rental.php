@@ -6,6 +6,9 @@ namespace App\Modules\CarRental\Models;
 
 use App\Models\User;
 use App\Modules\CarRental\Enums\RentalStatus;
+use App\Modules\Customer\Models\Customer;
+use App\Modules\Reservation\Models\Reservation;
+use App\Modules\Vehicle\Models\Vehicle;
 use Carbon\CarbonImmutable;
 use Database\Factories\Modules\CarRental\Models\RentalFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -72,36 +75,57 @@ class Rental extends Model
         ];
     }
 
+    /**
+     * @return BelongsTo<Reservation, $this>
+     */
     public function reservation(): BelongsTo
     {
         return $this->belongsTo(Reservation::class);
     }
 
+    /**
+     * @return BelongsTo<Vehicle, $this>
+     */
     public function vehicle(): BelongsTo
     {
         return $this->belongsTo(Vehicle::class);
     }
 
+    /**
+     * @return BelongsTo<Customer, $this>
+     */
     public function customer(): BelongsTo
     {
         return $this->belongsTo(Customer::class);
     }
 
+    /**
+     * @return BelongsTo<User, $this>
+     */
     public function creator(): BelongsTo
     {
         return $this->belongsTo(User::class, 'created_by');
     }
 
+    /**
+     * @return HasMany<Inspection, $this>
+     */
     public function inspections(): HasMany
     {
         return $this->hasMany(Inspection::class);
     }
 
+    /**
+     * @return HasOne<Deposit, $this>
+     */
     public function deposit(): HasOne
     {
         return $this->hasOne(Deposit::class);
     }
 
+    /**
+     * @return HasMany<Payment, $this>
+     */
     public function payments(): HasMany
     {
         return $this->hasMany(Payment::class);

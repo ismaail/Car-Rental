@@ -45,6 +45,9 @@ class Deposit extends Model
         ];
     }
 
+    /**
+     * @return BelongsTo<Rental, $this>
+     */
     public function rental(): BelongsTo
     {
         return $this->belongsTo(Rental::class);

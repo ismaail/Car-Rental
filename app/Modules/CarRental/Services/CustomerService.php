@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\CarRental\Services;
 
-use App\Modules\CarRental\Models\Customer;
+use App\Modules\Customer\Models\Customer;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;

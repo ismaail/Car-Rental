@@ -6,9 +6,9 @@ namespace Database\Seeders;
 
 use App\Enums\UserRole;
 use App\Models\User;
-use App\Modules\CarRental\Enums\VehicleStatus;
-use App\Modules\CarRental\Models\Customer;
-use App\Modules\CarRental\Models\Vehicle;
+use App\Modules\Customer\Models\Customer;
+use App\Modules\Vehicle\Models\Vehicle;
+use App\Modules\Vehicle\Types\VehicleStatus;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 

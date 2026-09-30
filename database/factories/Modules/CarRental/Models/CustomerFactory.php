@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Factories\Modules\CarRental\Models;
 
-use App\Modules\CarRental\Models\Customer;
+use App\Modules\Customer\Models\Customer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
